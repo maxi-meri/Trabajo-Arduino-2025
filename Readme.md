@@ -98,6 +98,5 @@ Imágenes y Video Demostrativo
 ***********************
 
 Licencia
-Este proyecto se distribuye bajo la licencia **MIT**.  
-Puedes usarlo, modificarlo y compartirlo libremente mencionando a los autores.
+Este proyecto se distribuye bajo la licencia **MIT**.
 
