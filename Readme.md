@@ -64,6 +64,9 @@ Esquema Eléctrico / Diagrama de Conexiones
 ************************
 
 Máquina de Estados
+
+[Diagrama de estado](media/diagrama de estado.png)
+
 El sistema trabaja con la siguiente lógica:
 
 1. **Esperando**  
