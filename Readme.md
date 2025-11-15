@@ -16,8 +16,8 @@ Docentes y Materia
 Laboratoria de Computacion 1
  
 - **Docentes:**
-Matias Jose Gagliardo
-Pedro Facundo Iriso
+Matias Gagliardo, 
+Pedro Iriso
 
 ************************
 
@@ -57,25 +57,13 @@ Componentes Utilizados
 
 *************************
 
-## 🔌 Esquema Eléctrico / Diagrama de Conexiones
-*(Agregá aquí la imagen desde la carpeta `/doc` o `/media` una vez que la subas.)*
+Esquema Eléctrico / Diagrama de Conexiones
 
-Ejemplo (modificá según tu conexión real):
 
-- **HC-SR04**
-  - VCC → 5V  
-  - GND → GND  
-  - TRIGGER → Pin 9  
-  - ECHO → Pin 8  
 
-- **Servo MG90S**
-  - Marrón/Negro (GND) → GND  
-  - Rojo (VCC) → 5V  
-  - Naranja (Señal) → Pin 11  
+************************
 
----
-
-## 🔄 Máquina de Estados
+Máquina de Estados
 El sistema trabaja con la siguiente lógica:
 
 1. **Esperando**  
@@ -87,26 +75,22 @@ El sistema trabaja con la siguiente lógica:
 4. **Reinicio**  
    - El servo vuelve a su posición inicial y retorna a *Esperando*.
 
-*(Podés agregar un diagrama en `/doc` si querés)*
+***********************
 
----
-
-## ▶️ Instrucciones de Uso y Ejecución
+Instrucciones de Uso y Ejecución
 1. Conectar el Arduino según el esquema del proyecto.  
-2. Subir el código `.ino` desde la carpeta `/src` del repositorio.  
+2. Subir el código desde la carpeta `/src` del repositorio.  
 3. Alimentar el Arduino mediante USB o fuente externa de 5V.  
 4. Colocar el dispensador en la maqueta con alimento dentro.  
-5. Acercarse a menos de **X cm** (valor configurado en el código) para activar el sistema.
+5. Acercarse a menos de **8cm a 16cm** para activar el sistema.
 
----
+**********************
 
-## 🖼️ Imágenes y Video Demostrativo
-*(Insertar aquí las imágenes o video que subas en la carpeta `/media`)*
+Imágenes y Video Demostrativo
+ 
+![Maqueta del proyecto](media/wa)
 
-Ejemplo:  
-![Maqueta del proyecto](media/maqueta.jpg)
-
----
+***********************
 
 ## 📄 Licencia
 Este proyecto se distribuye bajo la licencia **MIT**.  
