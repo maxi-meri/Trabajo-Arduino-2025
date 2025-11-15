@@ -91,7 +91,7 @@ Instrucciones de Uso y Ejecución
 
 Imágenes y Video Demostrativo
  
-![Imagen Demostrativa](media/Demostracion.jpg)
+![Imagen Demostrativa](media/Desmostracion.jpg)
 
 ![Video Demostrativa]()
 
