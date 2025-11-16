@@ -1,4 +1,4 @@
-#include <Servo.h> // Libreria para el servoMotor 
+#include <Servo.h> // Libreria para el ServoMotor
 
 const int sensor1 = 8;    // Declaracion de Pines
 const int sensor2 = 9;      
@@ -7,7 +7,7 @@ const int motor2 = 10;
 
 Servo servoMotor;
 unsigned int distancia;
-bool leerSensor = true; // Variable para controlar cuándo leer el sensor
+bool leerSensor = true; // Variable para controlar cuándo el sensor lee la distancia
 
 unsigned long tiempoAnterior = 0;
 unsigned long intervaloMedicion = 200;
@@ -37,15 +37,17 @@ void loop() {
 }
 
 void medirSensor() {
+  
   // Envío de pulso TRIGGER
   digitalWrite(sensor2, LOW);
   delayMicroseconds(2);
   digitalWrite(sensor2, HIGH);
   delayMicroseconds(10);
   digitalWrite(sensor2, LOW);
-
+  
   // Lectura del pulso ECHO
   unsigned long duracion = pulseIn(sensor1, HIGH, 30000);
+  
   if (duracion == 0) return; // Si no hubo lectura, salir
 
   distancia = duracion / 58; // Conversión a cm
@@ -63,10 +65,11 @@ void medirSensor() {
 
     servoMotor.write(180);
     digitalWrite(motor1, HIGH);
-    
-    void controlarMotor(unsigned long tiempoActual) {
-  switch (estadoMotor) {
+  }
+}
 
+void controlarMotor(unsigned long tiempoActual) {
+  switch (estadoMotor) {
     // Primer movimiento 
     case 0:
       if (tiempoActual - tiempoMotor >= 2000) {
@@ -75,7 +78,6 @@ void medirSensor() {
         estadoMotor = 1;
       }
       break;
-
     // Segundo movimiento 
     case 1:
       if (tiempoActual - tiempoMotor >= 2000) {
@@ -96,4 +98,3 @@ void medirSensor() {
       break;
   }
 }
-
