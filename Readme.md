@@ -59,7 +59,7 @@ Componentes Utilizados
 
 Esquema Eléctrico / Diagrama de Conexiones
 
-
+![Diagrama de conexiones](media/diagrama_conexiones.png)
 
 ************************
 
