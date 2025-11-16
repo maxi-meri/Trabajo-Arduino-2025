@@ -94,9 +94,3 @@ Imágenes y Video Demostrativo
 ![Imagen Demostrativa](media/Desmostracion.jpg)
 
 ![Video Demostrativa](media/Demostracion.mp4)
-
-***********************
-
-Licencia
-Este proyecto se distribuye bajo la licencia **MIT**.
-
