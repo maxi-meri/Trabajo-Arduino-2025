@@ -35,3 +35,33 @@ void loop() {
     controlarMotor(tiempoActual);
   }
 }
+
+void medirSensor() {
+  // Envío de pulso TRIGGER
+  digitalWrite(sensor2, LOW);
+  delayMicroseconds(2);
+  digitalWrite(sensor2, HIGH);
+  delayMicroseconds(10);
+  digitalWrite(sensor2, LOW);
+
+  // Lectura del pulso ECHO
+  unsigned long duracion = pulseIn(sensor1, HIGH, 30000);
+  if (duracion == 0) return; // Si no hubo lectura, salir
+
+  distancia = duracion / 58; // Conversión a cm
+  
+  Serial.print("Distancia: ");
+  Serial.print(distancia);
+  Serial.println(" cm");
+
+  // Activación del motor si está entre 8 y 16 cm
+  if (distancia <= 16 && distancia >= 8 && leerSensor && !movimientoActivo) {
+    leerSensor = false;
+    movimientoActivo = true;
+    tiempoMotor = millis();
+    estadoMotor = 0;
+
+    servoMotor.write(180);
+    digitalWrite(motor1, HIGH);
+  }
+}
